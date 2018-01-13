@@ -45,7 +45,7 @@ class MyForm extends React.Component {
 
   handleMultilineChange = event => {
     const {value} = event.target
-    const allVals = csvToVals(value)
+    const allVals = value.split('\n').filter(Boolean)
     
     this.setState({
       multiLine: value,
